@@ -576,6 +576,36 @@ article.portfolio .col-lg-12 h2 + p {
 .team {
   background-color: #f7f7f7;
 }
+.stats {
+  background-image: url(../../images/stats_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.stats > * {
+  position: relative;
+  z-index: 2;
+}
+.stats:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #262732;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=85);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=85);
+  -moz-opacity: 0.85;
+  -khtml-opacity: 0.85;
+  opacity: 0.85;
+  z-index: 1;
+}
 .navbar-nav > li {
   float: none;
   display: inline-block;
@@ -938,6 +968,20 @@ article.portfolio .col-lg-12 h2 + p {
 .single_member_inner_container .details {
   padding-bottom: 10px;
 }
+.single_member {
+  position: relative;
+}
+.single_member:after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-image: url(../images/top_triangle.png);
+  width: 61px;
+  height: 40px;
+}
 .single_member:nth-child(1) .image_container:after {
   background: -o-linear-gradient(0deg, rgba(252, 95, 69, 0.6), rgba(0, 0, 0, 0));
   background: -ms-linear-gradient(0deg, rgba(252, 95, 69, 0.6), rgba(0, 0, 0, 0));
@@ -993,10 +1037,14 @@ article.portfolio .col-lg-12 h2 + p {
 .member_details {
   background-color: #FFF;
   margin-top: 50px;
-  padding: 40px 100px;
+  padding: 40px 100px 67px;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+  display: none;
+}
+.member_details#member_details1 {
+  display: block;
 }
 .member_details h5 {
   font-weight: 500;
@@ -1008,4 +1056,29 @@ article.portfolio .col-lg-12 h2 + p {
 }
 .member_details p {
   word-wrap: -1px;
+}
+.member_details .social_connect {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+.member_details .connect {
+  width: 56%;
+  background: url(../images/soc_icons.png) 73% center no-repeat;
+}
+.member_details .links {
+  border-left: 2px solid #efefef;
+  width: 44%;
+  padding: 20px 24px;
+  padding-right: 0px;
+}
+.member_details .links li * {
+  display: inline-block;
+}
+.member_details .links li p {
+  line-height: 31px;
+}
+.member_details .links li i {
+  font-size: 16px;
 }
