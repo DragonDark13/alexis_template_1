@@ -200,13 +200,17 @@ background: linear-gradient(@deg , @1color,@2color) ;
     right: 0;
 }
 
-.layer_overlay(){
-    content: '';
+.absolute_block_pos(){
     position: absolute;
     left:0;
     right: 0;
     top: 0;
     bottom: 0;
+}
+
+.layer_overlay(){
+    content: '';
+    .absolute_block_pos;
     width: 100%;
     height: 100%;
     background: @bg_color;
@@ -231,13 +235,13 @@ background: linear-gradient(@deg , @1color,@2color) ;
 .section_hader(){
 
     h2{
-            line-height: 50px;
+            line-height: 47px;
         }
 
         h2+p{
             font-size: 18px;
-            line-height: 80px;
-            margin-bottom: 48px;
+            line-height: 89px;
+            margin-bottom: 42px;
         }
 
         h2,
