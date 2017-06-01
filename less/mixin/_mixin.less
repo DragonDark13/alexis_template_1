@@ -166,6 +166,7 @@ background: linear-gradient(@deg , @1color,@2color) ;
 @default_font_fam: Popins;
 @header_font_fam: "Libre Baskerville Regular";
 @logo_font: wisdom_script;
+@client_name_font: Sacramento;
 
 .media_min(@size,@rules) {
     @px: px;
@@ -189,7 +190,6 @@ background: linear-gradient(@deg , @1color,@2color) ;
 
 .page_number(){
   
-
     .page_number_base_style;
     .opacity(0.3);
     font-size: 18px;
@@ -306,4 +306,22 @@ height: 100%;
     .block_box_shadow;
 }
 
+
+.image_container_style{
+    .box-shadow( inset 0 0 0 10px fade( @color_black , 20% ));
+    .base_effect_block;
+    background-color: @color_white;
+    // padding: 10px;
+
+    &:after {
+    .base_gradient_layer;
+    .cross_gradient(0deg, fade( @btn_bg ,60% ), fade( @color_black ,0% ));
+    }
+
+    img{
+    position: relative; 
+    z-index: 0;
+    border: 10px fade( @color_black , 20% ) solid;
+    }
+}
 
