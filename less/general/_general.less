@@ -59,4 +59,15 @@ a:hover{
 
 body::-webkit-scrollbar { width: 0; }
 
+[type="text"],
+[type="email"],
+textarea{
+	.hidden_placeholder;
+	.transition;
+
+	&:focus{
+		outline: none;
+	}
+}
+
 

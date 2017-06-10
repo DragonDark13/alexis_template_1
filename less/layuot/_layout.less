@@ -20,6 +20,10 @@
 
 	}
 
+	.main_meni{
+	    padding-left: 29px;
+	}
+
 	.nav.navbar-nav{
 	padding-top: 9px;
 	text-align: right;
@@ -119,7 +123,7 @@
 		outline: 1px solid #000;
 		// height: 550px;
 		z-index: 2;
-		padding: 76px 82px  90px;
+		padding: 93px 84px  90px;
 		text-align: left;
 
 			&:before {
@@ -165,7 +169,7 @@
 		}
 
 		h2{
-			margin-bottom: 24px;
+			margin-bottom: 41px;
 		// 	.About_Us_ {
   font-size: 59px;
   // font-family: "Libre Baskerville";
@@ -240,6 +244,12 @@
 		.borderRadius(50%);
 		background-image: url(../images/video_icon.png);
 		margin: 40px auto 41px;
+		cursor: pointer;
+		.transition;
+
+		&:hover{
+			.my_trasform(rotate(90deg));
+		}
 		}
 
 		p{
@@ -254,6 +264,7 @@
 
 		h2{
 			font-size: 61px;
+			margin-bottom: 3px;
 		}
 
 		.container .row .col-lg-12>h2{
@@ -261,7 +272,7 @@
 		}
 
 		article& .col-lg-12 h2+p{
-			margin-bottom: 49px;
+			    margin-bottom: 40px;
 		}
 
 		.portfolio_items{
@@ -274,20 +285,24 @@
 	.team{
 
 		h2{
-
 		-moz-transform: matrix( 1.00070473061229,0,0,1.00247715936006,0,0);
 		-webkit-transform: matrix( 1.00070473061229,0,0,1.00247715936006,0,0);
 		-ms-transform: matrix( 1.00070473061229,0,0,1.00247715936006,0,0);
 		transform: matrix( 1.00070473061229,0,0,1.00247715936006,0,0);
 
-		line-height: 44px;
-		font-size: 60px;
+		// line-height: 44px;
+		// font-size: 60px;
 		letter-spacing: 1px;
+
+		margin-bottom: 2px;
+		font-size: 57px;
+		line-height: 37px;
 
 		}
 
 		.team_memebrs {
-			padding-top: 2px;
+			padding-top: 4px;
+		    margin-bottom: -4px;
 		}
 
 	}
@@ -392,14 +407,10 @@
 		.button{
 		color: @color_white;
 		background-color: @btn_bg;
-		font-weight: bold;
-		text-transform: uppercase;
-		font-size: 16px;
+		.base_button;
 		border: 2px solid @btn_bg;
 		display: inline-block;
 		padding: 14px 34px;
-		cursor: pointer;
-		.transition(0.3s);
 		.borderRadius(34px);
 		}
 
@@ -418,10 +429,171 @@
 			margin-left: 6px;
 			}
 		}
+	}
 
+	.blog{
+
+		h2{
+			    line-height: 37px;
+			    margin-bottom: 4px;
+		}
+
+		h2+p{
+			padding-bottom: 2px;
+		}
+
+		.image_container{
+			.image_gray_container_style;
+
+			.details{
+				position: absolute;
+				left: 0;
+				width: 100%;
+				top: 89%;
+				padding-left: 9%;
+				z-index: 3;
+			}
+
+			date{
+				padding-left: 16px;
+				line-height: 15px;
+			}
+		}
+	}
+
+
+	.subscription{
+		background-color: @color_white;
+
+		&:after{
+			display: none;
+		}
+
+		h4{
+			letter-spacing: 1.5px;
+			line-height: 24px;
+			margin-bottom: 53px;
+		}
+
+		.button{
+			.base_button;
+			padding: 14px;
+			border-color: @btn_bg;
+			background-color: @btn_bg;
+			color: @color_white;
+		}
+
+// 		.Background_copy {
+//   width: 480px;
+//   height: 50px;
+
+// }
+
+	form{
+		width: 480px;
+		.flex-display();
+		margin: 0 auto;
+	    margin-bottom: -2px;
+
+	    &>*{
+	    	.transition;
+	    }
+
+		// *{
+		// 	width: 50%;
+		// }
+	}
+
+
+
+	@input_w:  62.5%;
+	@button_w: 100% - 62.5%;
+	@hover_w: 10%;
+	@hover_input_w: @input_w - @hover_w;
+	@hover_button_w: @button_w + @hover_w;
+
+	.button{
+		box-shadow: none;
+		outline: 0;
+		width: @button_w;
+	    border-radius: 0px 29px 29px 0;
+
+	    &:hover{
+			background-color: darken(@btn_bg, 10%);
+		}
+	}
+
+	[type="email"]{
+		background-color: @bg_color_2;
+		border: 2px solid #efefef;
+		border-right: 0;
+		width: @input_w;
+		.box-sizing(border-box);
+		border-radius:  29px 0  0 29px ;
+		padding-left: 28px;
+		letter-spacing: 1px;
+		
+
+		&:hover{
+			border-color: @btn_bg;
+		}
+
+		&:focus{
+			outline: none;
+			width: @hover_input_w;
+		}
+
+		&:focus + .button{
+			width: @hover_button_w;
+		}
+	}
+
+	
+
+// 	.Background {
+//   width: 181px;
+//   height: 50px;
+
+// }
 
 
 	}
+
+
+	.contact{
+		background-color: #ccc;
+
+		.main_container > article&{
+			padding-bottom: 126px;
+		}
+
+		h2{
+			margin-top: -3px;
+		}
+
+		.form{
+			margin-top: 3px;
+		}
+
+		.button_container{
+			text-align: center;
+			padding-top: 27px;
+		}
+	}
+
+	.footer{
+		    margin-top: 124px;
+		    .flex-wrap();
+		    .flex-display();
+
+
+		    .soc_icon{
+	    	    margin-top: 38px;
+		    }
+		
+	}
+
+
 
 
 

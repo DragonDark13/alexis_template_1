@@ -1,7 +1,7 @@
 
 .navbar-nav>li{
-	float: none;
-	display: inline-block;
+	display: block;
+    float: left;
 
 	a{
 	font-size: 14px;
@@ -9,7 +9,8 @@
 	color: @textColor;
 	line-height: 1.929;
 	padding-left: 9px;
-	padding-right: 9px;
+	padding-right: 11px;
+	letter-spacing: 0.1px;
 	}
 
 	&:first-child>a{
@@ -42,7 +43,7 @@
 	// }
 
 	&:nth-child(3n + 1){
-		outline: 1px solid red;
+		// outline: 1px solid red;
 		.bg_base_block();
 
 		&:after{
@@ -391,7 +392,7 @@
 .single_member{
 	position: relative;
 
-	&:after{
+	&.active:after{
 		content: '';
 		position: absolute;
 		bottom: -50px;
@@ -447,7 +448,7 @@
 
 .member_details{
 	margin-top: 50px;
-	padding: 46px 97px 67px;
+	padding: 46px 97px 71px;
 	.block_elem;
 
 
@@ -615,7 +616,7 @@
 	}
 
 	.text_container{
-		outline: 1px solid #000;
+		// outline: 1px solid #000;
 		padding: 35px 47px 0px 124px;
 		height: 100%;
 		margin-top: -50px;
@@ -708,11 +709,17 @@
 	margin-top: 1px;
 
 
+
 	&>div{
 		.block_elem;
 		text-align: center;
 		border-top: 3px solid ;
 		padding: 18px;
+		.transition;
+
+		&:hover{
+			.my_trasform(translateY(-20px));
+		}
 	}
 
 	h5{
@@ -728,8 +735,9 @@
 	width: 100px;
 	height: 100px;
 	margin: 14px auto;
-   .box-sizing(content-box);
-   color: @color_white;
+	.box-sizing(content-box);
+	color: @color_white;
+	.transition;
 	}
 
 	.price{
@@ -738,7 +746,7 @@
 	    margin-bottom: 6px;
 	}
 
-	.time{
+	time{
 		letter-spacing: 1px;
 		font-size: 13px;
 	}
@@ -758,17 +766,10 @@
 	}
 
 	.button{
-	font-size: 16px;
-	font-weight: bold;
-	text-transform: uppercase;
-	font-size: 16px;
-	border: 2px solid;
 	margin: 27px auto 20px;
 	.borderRadius(34px);
 	display: inline-block;
-    padding: 14px 34px;
-    .transition;
-    cursor: pointer;
+    .base_button;
 	}
 
 	i{
@@ -784,6 +785,10 @@
 		.pricing{
 			background-color: @color;
 			.box-shadow(0px 0px 0px 3px @color);
+		}
+
+		&>div:hover .pricing{
+			.box-shadow(0px 0px 0px 6px @color);
 		}
 
 		.button{
@@ -929,6 +934,286 @@ width: 34%;
 			-ms-transform: matrix( 0.99910510092473,0,0,0.99983641419925,0,0);
 			padding: 26px 0px 66px;
 		    line-height: 27px;
+		}
+
+	}
+
+	.blog{
+
+			.author{
+				font-size: 15px;
+				text-transform: uppercase;
+				color: @line_color1;
+			}
+
+			time{
+				font-size: 13px;
+				color: @color_white;
+			}
+
+			.article{
+			    padding: 23px 49px;
+			}
+
+			h5{
+			    line-height: 34px;
+				letter-spacing: 1px;
+				word-spacing: 1.3px;
+				margin-bottom: 18px;
+			    font-weight: 500;
+			}
+
+			p{
+				line-height: 28px;
+			}
+
+			.read_more{
+				font-size: 15px;
+				font-weight: 500;
+				color: @textColor;
+				padding-left: 6px;
+			}
+
+			.top_post,
+			.single_post{
+				.block_elem;
+			}
+
+			.top_post{
+				padding-bottom: 14px;
+				border-bottom: 3px @line_color1 solid;
+			}
+
+	}
+
+	.single_post{
+	    padding: 31px 37px 25px;
+	    border-bottom: 3px solid;
+	    margin-bottom: 23px;
+
+	    &:last-child{
+	    	margin-bottom: 0;
+	    }
+
+		.color(@color){
+
+			&{
+			border-color: @color;
+			}
+
+			.read_more,
+			.author{
+				color: @color;
+			}
+		}
+
+		.read_more{
+			    padding-left: 0px;
+		}
+
+		.author{
+		word-spacing: 3px;
+		display: inline-block;
+		}
+
+		time{
+		color: @logoTextColor;
+		padding-left: 21px;
+		}
+
+		.details{
+		margin-bottom: 16px;
+		}
+
+		h6{
+		font-weight: 500;
+		word-spacing: 0px;
+		letter-spacing: 1.2px;
+		margin-bottom: 17px;
+		}
+
+		p{
+		wword-spacing: -0.5px;
+		line-height: 27px;
+		}
+
+		&:nth-child(1){
+			.color(@line_color2);
+		}
+
+		&:nth-child(2){
+			.color(@line_color3);
+		}
+
+		&:nth-child(3){
+			.color(@line_color4);
+		}
+	}
+
+	.form{
+
+		input,
+		textarea{
+			border: 1px solid @input_border_coor;
+			width: 100%;
+			padding: 17px  10px;
+			.borderRadius(4px);
+			background-color: @color_white;
+			.box-sizing(border-box);
+			margin-bottom: 24px;
+			text-align: center;
+			color: @logoTextColor;
+			font-size: 16px;
+		}
+
+		[type="text"],
+		[type="email"]{
+			  height: 50px;
+		}
+
+		textarea{
+			  height: 202px;
+		}
+
+		[type="text"],
+		[type="email"],
+		textarea{
+
+			&:hover,
+			&:focus{
+					border-color: @btn_bg;
+			}
+
+			&:focus{
+			.box-shadow( 0 0 0 3px @btn_bg);
+			
+
+			}
+	
+		}
+
+		.button{
+			.base_button;
+			display: inline-block;
+			width: auto;
+			.borderRadius(26px);
+			background-color: @btn_bg;
+			border-color: @btn_bg;
+			color: @color_white;
+		    padding: 14px 30px;
+		    .transition;
+
+		    &:hover{
+			background-color: darken(@btn_bg, 10%);
+			}
+		}
+	}
+
+
+	.footer{
+
+		.column{
+			background-color:  fade( @bg_color , 85%);
+		}
+
+		.footer_logo{
+			font-family: @logo_font;
+			font-size: 50px;
+			line-height: 50px;
+			color: @color_white;
+			margin-top: 80px;
+			margin-bottom: 95px;
+			text-align: center;
+
+			&:first-letter{
+			color: #fc5f45;
+			}
+		}
+
+		.color(@color:@line_color4){
+
+			h6{
+				color: @color;
+			}
+		}
+
+		.column{
+			// border-bottom: 3px solid;
+			// width: 1139px;
+			// height: 225px;
+
+			.color_border(@color: @line_color4){
+				border-bottom-color: @color;
+			}
+
+			&:first-child{
+				padding-left: 0;
+				border-left: 15px solid #ccc;
+			}
+
+			&:last-child{
+				padding-right: 0;
+				border-right: 15px solid #ccc;
+			}
+
+			&:nth-last-child(1){
+				.color(@line_color4);
+				.color_border(@line_color4);
+			}
+
+			&:nth-last-child(2){
+				.color(@line_color3);
+				.color_border(@line_color2);
+			}
+
+			&:nth-last-child(3){
+				.color(@line_color2);
+				.color_border(@line_color2);
+			}
+
+			&:nth-last-child(4){
+				.color(@line_color1);
+				.color_border(@line_color1);
+			}
+
+			h6,
+			p,
+			ul{
+			    padding-left: 30px;
+
+			}
+
+			h6{
+				padding-top: 62px;
+			}
+
+			p{
+				color: @color_white;
+				font-size: 16px;
+			    word-spacing: 0px;
+			    line-height: 27px;
+		        margin-top: 34px;
+			}
+		}
+
+		.soc_icon li{
+			display: inline-block;
+		    margin-right: 15px;
+
+		    a{
+		    	display: block;
+		    }
+
+			i{
+				font-size: 31px;
+				color: @color_white;
+				.transition(1s);
+			}
+
+			a:hover i{
+			color: @line_color4;
+			.my_trasform(rotate(360deg));
+			}
 		}
 
 		
