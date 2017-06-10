@@ -803,7 +803,8 @@ article.portfolio .col-lg-12 h2 + p {
   padding-left: 28px;
   letter-spacing: 1px;
 }
-.subscription [type="email"]:hover {
+.subscription [type="email"]:hover,
+.subscription [type="email"]:focus {
   border-color: #fc5f45;
 }
 .subscription [type="email"]:focus {
@@ -2189,7 +2190,14 @@ article.portfolio .col-lg-12 h2 + p {
 .single_feature > *,
 .about .text,
 .about .image_container,
-.how_we_work .text_container {
+.how_we_work .text_container,
+.call,
+.content > .my_btn,
+.top_post,
+.single_post,
+.tool ~ *,
+.tool,
+.member_details {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
   -moz-opacity: 0;
@@ -2209,7 +2217,14 @@ article.portfolio .col-lg-12 h2 + p {
 .single_feature > *.animated,
 .about .text.animated,
 .about .image_container.animated,
-.how_we_work .text_container.animated {
+.how_we_work .text_container.animated,
+.call.animated,
+.content > .my_btn.animated,
+.top_post.animated,
+.single_post.animated,
+.tool ~ *.animated,
+.tool.animated,
+.member_details.animated {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
   -moz-opacity: 1;
