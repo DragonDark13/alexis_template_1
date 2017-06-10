@@ -23,3 +23,21 @@
 		}
 	}
 
+.service, .portfolio_container,
+.single_member_inner_container,
+.stat_container>*,
+.how_we_work .image_container,
+.single_package>*,
+.single_feature>*,
+.about .text,
+.about .image_container,
+.how_we_work .text_container
+{
+.opacity(0);
+.transition;
+
+	&.animated{
+	.opacity(1);
+	}
+}
+
