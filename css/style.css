@@ -1283,17 +1283,6 @@ article.portfolio .col-lg-12 h2 + p {
 .single_member {
   position: relative;
 }
-.single_member.active:after {
-  content: '';
-  position: absolute;
-  bottom: -50px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background-image: url(../images/top_triangle.png);
-  width: 61px;
-  height: 40px;
-}
 .single_member:nth-child(1) .image_container:after {
   background: -o-linear-gradient(0deg, rgba(252, 95, 69, 0.6), rgba(0, 0, 0, 0));
   background: -ms-linear-gradient(0deg, rgba(252, 95, 69, 0.6), rgba(0, 0, 0, 0));
@@ -2135,4 +2124,15 @@ article.portfolio .col-lg-12 h2 + p {
   -moz-transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
+}
+.single_member.active:after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-image: url(../images/top_triangle.png);
+  width: 61px;
+  height: 40px;
 }
