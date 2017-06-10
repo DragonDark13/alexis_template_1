@@ -490,6 +490,23 @@
 	display: inline-block;
 	}
 
+	i{
+		.transition;
+	}
+
+	.links a{
+		color: @logoTextColor;
+
+		&:hover *{
+			color: @btn_bg;
+		}
+
+		&:hover i{
+			.my_trasform(translateX(-10px));
+			.my_trasform(scale(1.2));
+		}
+	}
+
 	.links li{
 
 		p{
@@ -880,13 +897,12 @@ width: 34%;
 		display: block;
 		float: right;
 		margin-left: 6px;
+		.transition;
 
-		&.active{
-		padding: 4px;
-		background: @line_color1;
-		background-clip: content-box;
-		border-color: @line_color1;
+		&:hover{
+			border-color: @btn_bg;
 		}
+
 	}
 
 	.single_feature{
@@ -961,6 +977,14 @@ width: 34%;
 				font-weight: 500;
 				color: @textColor;
 				padding-left: 6px;
+
+				&:hover{
+					text-decoration: underline;
+				}
+
+				// &:after{
+				// 	content: '&#187;';
+				// }
 			}
 
 			.top_post,
@@ -1058,6 +1082,7 @@ width: 34%;
 		[type="text"],
 		[type="email"]{
 			  height: 50px;
+			  padding-right: 40px;
 		}
 
 		textarea{
@@ -1078,7 +1103,58 @@ width: 34%;
 			
 
 			}
-	
+		}
+
+		.valid{
+			position: absolute;
+			right: 15px;
+			top: 0;
+			width: 40px;
+			text-align: center;
+			z-index: 2;
+		}
+
+		.valid i{
+			display: none;
+			line-height: 50px;
+			font-size: 25px;
+		}
+
+		.fa-exclamation-triangle{
+			color: red;
+		}
+
+		.fa-check-square{
+			color: green;
+		}
+
+		input{
+
+			&:focus:invalid+.valid{
+
+				.fa-exclamation-triangle{
+				display: inline-block;
+				}
+
+				.fa-check-square{
+				display: none;
+				}
+			}
+
+			&:focus:valid+.valid{
+				
+				.fa-exclamation-triangle{
+				display: none;
+				}
+
+				.fa-check-square{
+				display: inline-block;
+				}
+			}
+
+			
+
+		
 		}
 
 		.button{

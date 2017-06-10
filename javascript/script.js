@@ -9,5 +9,9 @@ jQuery(document).ready(function($) {
             jQuery('#size').remove();
             jQuery('body').prepend('<div id="size" style="background:#000;padding:5px;position:fixed;z-index:9999;color:#fff;">Width = '+myWidth+'</div>');
         });
+
+        $('.dummy').viewportChecker({
+
+        });
 	
 });
