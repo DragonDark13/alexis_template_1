@@ -175,17 +175,18 @@ background: linear-gradient(@deg , @1color,@2color) ;
         font-family: @fontName;
         src: url('../fonts/@{fontName}/@{fontName}.eot');
         src: url('../fonts/@{fontName}/@{fontName}.otf');
-        src: url('../fonts/@{fontName}/@{fontName}.eot?#iefix') format('embedded-opentype'),
-             url('../fonts/@{fontName}/@{fontName}.woff') format('woff'),
-             url('../fonts/@{fontName}/@{fontName}.ttf') format('truetype'),
-             url('../fonts/@{fontName}/@{fontName}.svg#@{fontName}') format('svg');
+        src: url('../fonts/@{fontName}/@{fontName}.eot?#iefix') ;
+         src:
+             url('../fonts/@{fontName}/@{fontName}.woff') ; src:
+             url('../fonts/@{fontName}/@{fontName}.ttf') ; src:
+             url('../fonts/@{fontName}/@{fontName}.svg#@{fontName}') ;
         font-weight: @fontWeight;
         font-style: @fontStyle;
     }
 }
 
 @default_font_fam: Popins;
-@header_font_fam: "Libre Baskerville Regular";
+@header_font_fam: LibreBaskerville_Regular;
 @logo_font: wisdom_script;
 @client_name_font: Sacramento;
 
@@ -292,8 +293,9 @@ background: linear-gradient(@deg , @1color,@2color) ;
 
         h2+p{
             font-size: 18px;
-            line-height: 89px;
-            margin-bottom: 42px;
+            line-height: 27px;
+            margin-bottom: 74px;
+            margin-top: 31px;
         }
 
         h2,
