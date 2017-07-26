@@ -78,9 +78,22 @@ jQuery(document).ready(function($) {
 
     });
 
+
     // easy scroll
 
   jQuery('.main_meni  a').click(function(){
+
+   
+    /* Act on the event */
+
+    if ( jQuery(".navbar-default").hasClass('js_response_meni') ) {
+
+        jQuery(".navbar-toggle").addClass('collapsed');
+        jQuery(".navbar-default").removeClass('js_response_meni').next(".main_container").removeClass('js_response_hide');
+        jQuery(".navbar-collapse").removeClass('in');
+    }
+
+ 
     var target = jQuery(this).attr('href');
     jQuery('html, body').animate({scrollTop: jQuery(target).offset().top}, 1000);
     return false;
