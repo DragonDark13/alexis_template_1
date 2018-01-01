@@ -86,7 +86,7 @@
 	background-color: @btn_bg;
 	padding: 16px 40px;
 	font-size: 16px;
-	font-weight: bold;
+	font-weight: 600;
 	text-transform: uppercase;
 	color: @color_white;
 	.borderRadius(25px);
@@ -447,6 +447,21 @@
 	padding: 46px 97px 71px;
 	.block_elem;
 
+	&:after{
+		content: '';
+		position: absolute;
+		top: 10px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		margin-left: 10%;
+		background-image: url(../images/top_triangle.png);
+		width: 61px;
+		height: 40px;
+		.transition(0.3s 0.7s);
+	}
+
+
 	&#member_details1{
 		display: block;
 	}
@@ -548,6 +563,9 @@
 	    border: 1px solid;
 	    background-clip: content-box;
 	}
+}
+
+.stat{
 
 	.color(@color){
 
@@ -581,6 +599,8 @@
 		.color(@line_color4);
 
 	}
+
+
 }
 
 .how_we_work{

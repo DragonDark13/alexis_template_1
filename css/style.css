@@ -219,7 +219,7 @@ body {
 }
 h1,
 h2 {
-  font-family: LibreBaskerville_Regular;
+  font-family: 'Libre Baskerville';
 }
 h1 {
   font-size: 73px;
@@ -228,7 +228,7 @@ h1 {
 h2 {
   font-size: 61px;
   line-height: 45px;
-  color: #313131;
+  color: #343434;
   font-weight: bold;
   font-stretch: extra-expanded;
   letter-spacing: 0.2px;
@@ -240,7 +240,7 @@ h4 {
 h5 {
   font-size: 20px;
   line-height: 50px;
-  color: #313131;
+  color: #343434;
 }
 h6 {
   font-size: 18px;
@@ -598,7 +598,7 @@ article.portfolio .col-lg-12 h2 + p {
   margin-bottom: -4px;
 }
 .stats {
-  background-image: url(../../images/stats_bg.png);
+  background-image: url(../images/stats_bg.png);
   padding-bottom: 127px;
 }
 .how_we_work .container > .row:nth-child(1) {
@@ -611,7 +611,7 @@ article.portfolio .col-lg-12 h2 + p {
   transform: matrix(1.00070473, 0, 0, 1.00140909, 0, 0);
 }
 .testimonials {
-  background-image: url(../../images/testimonials_bg.png);
+  background-image: url(../images/testimonials_bg.png);
 }
 .testimonials h2,
 .testimonials h2 + p {
@@ -660,7 +660,7 @@ article.portfolio .col-lg-12 h2 + p {
 .why_choose_us .button {
   color: #FFF;
   background-color: #fc5f45;
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 16px;
   border: 2px solid;
@@ -756,7 +756,7 @@ article.portfolio .col-lg-12 h2 + p {
 }
 .subscription .button {
   padding: 14px 34px;
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 16px;
   border: 2px solid;
@@ -1023,7 +1023,7 @@ article.portfolio .col-lg-12 h2 + p {
   background-color: #fc5f45;
   padding: 16px 40px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
   color: #FFF;
   -webkit-border-radius: 25px;
@@ -1436,6 +1436,22 @@ article.portfolio .col-lg-12 h2 + p {
   -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
 }
+.member_details:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-left: 10%;
+  background-image: url(../images/top_triangle.png);
+  width: 61px;
+  height: 40px;
+  -ms-transition: 0.3s 0.7s;
+  -webkit-transition: 0.3s 0.7s;
+  -moz-transition: 0.3s 0.7s;
+  transition: 0.3s 0.7s;
+}
 .member_details#member_details1 {
   display: block;
 }
@@ -1525,19 +1541,19 @@ article.portfolio .col-lg-12 h2 + p {
   border: 1px solid;
   background-clip: content-box;
 }
-.stat_container:nth-child(1) .stat_pointer {
+.stat:nth-child(1) .stat_pointer {
   border-color: #fc5f45;
   background-color: #fc5f45;
 }
-.stat_container:nth-child(2) .stat_pointer {
+.stat:nth-child(2) .stat_pointer {
   border-color: #38c695;
   background-color: #38c695;
 }
-.stat_container:nth-child(3) .stat_pointer {
+.stat:nth-child(3) .stat_pointer {
   border-color: #b27cf5;
   background-color: #b27cf5;
 }
-.stat_container:nth-child(4) .stat_pointer {
+.stat:nth-child(4) .stat_pointer {
   border-color: #feb960;
   background-color: #feb960;
 }
@@ -1603,7 +1619,7 @@ article.portfolio .col-lg-12 h2 + p {
   transform-origin: top center;
   left: 35px;
   top: 53px;
-  font-family: LibreBaskerville_Regular;
+  font-family: 'Libre Baskerville';
 }
 .how_we_work .text_container:before {
   content: '';
@@ -1770,7 +1786,7 @@ article.portfolio .col-lg-12 h2 + p {
   border-radius: 34px;
   display: inline-block;
   padding: 14px 34px;
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 16px;
   border: 2px solid;
@@ -2168,7 +2184,7 @@ article.portfolio .col-lg-12 h2 + p {
 }
 .form .button {
   padding: 14px 34px;
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 16px;
   border: 2px solid;
@@ -2591,17 +2607,6 @@ article.portfolio .col-lg-12 h2 + p {
     width: 66.66666667%;
   }
 }
-.single_member.active:after {
-  content: '';
-  position: absolute;
-  bottom: -50px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background-image: url(../images/top_triangle.png);
-  width: 61px;
-  height: 40px;
-}
 .navigation a.active {
   padding: 4px;
   background: #fc5f45;
@@ -2610,7 +2615,7 @@ article.portfolio .col-lg-12 h2 + p {
 }
 .service,
 .portfolio_container,
-.single_member_inner_container,
+.single_member,
 .stat_container > *,
 .how_we_work .image_container,
 .single_package > *,
@@ -2637,7 +2642,7 @@ article.portfolio .col-lg-12 h2 + p {
 }
 .service.animated,
 .portfolio_container.animated,
-.single_member_inner_container.animated,
+.single_member.animated,
 .stat_container > *.animated,
 .how_we_work .image_container.animated,
 .single_package > *.animated,

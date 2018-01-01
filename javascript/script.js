@@ -26,7 +26,7 @@ jQuery(document).ready(function($) {
 
   });
 
-  jQuery('.service, .portfolio_container, .single_member_inner_container,.how_we_work .image_container, .single_package>*, .single_feature>*, .member_details').viewportChecker({
+  jQuery('.service, .portfolio_container, .single_member,.how_we_work .image_container, .single_package>*, .single_feature>*, .member_details').viewportChecker({
 
         classToAdd: 'animated zoomIn',
 
