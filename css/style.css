@@ -342,7 +342,7 @@ textarea:focus {
   float: none;
   margin: 0 auto;
 }
-.home h1 {
+.home h2 {
   color: #FFF;
   padding-top: 86px;
   margin-left: auto;
@@ -351,6 +351,7 @@ textarea:focus {
   font-size: 76px;
   line-height: 83px;
   letter-spacing: 0;
+  font-weight: normal;
 }
 .home .features {
   margin-top: 85px;
@@ -849,13 +850,13 @@ article.portfolio .col-lg-12 h2 + p {
   margin-top: 38px;
 }
 @media (max-width: 1280px) {
-  .home h1 {
+  .home h2 {
     padding-top: 49px;
     font-size: 50px;
   }
 }
 @media (max-width: 1199px) {
-  .home h1 {
+  .home h2 {
     padding-top: 20px;
   }
   .about .col-lg-6 {
@@ -877,7 +878,7 @@ article.portfolio .col-lg-12 h2 + p {
   .main_meni {
     padding-left: 15px;
   }
-  .home h1 {
+  .home h2 {
     font-size: 42px;
     line-height: 50px;
   }
@@ -934,23 +935,23 @@ article.portfolio .col-lg-12 h2 + p {
   counter-reset: my-article-counter2;
   counter-reset: my-article-counter1 -1;
 }
-.main_container > article {
+.main_container > * {
   padding-top: 150px;
   padding-bottom: 150px;
   position: relative;
   overflow: hidden;
 }
-.main_container > article .col-lg-12 h2 + p {
+.main_container > * .col-lg-12 h2 + p {
   font-size: 18px;
   line-height: 27px;
   margin-bottom: 74px;
   margin-top: 31px;
 }
-.main_container > article .col-lg-12 h2,
-.main_container > article .col-lg-12 h2 + p {
+.main_container > * .col-lg-12 h2,
+.main_container > * .col-lg-12 h2 + p {
   text-align: center;
 }
-.main_container > article:nth-child(3n + 1) {
+.main_container > *:nth-child(3n + 1) {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -959,11 +960,11 @@ article.portfolio .col-lg-12 h2 + p {
   position: relative;
   overflow: hidden;
 }
-.main_container > article:nth-child(3n + 1) > * {
+.main_container > *:nth-child(3n + 1) > * {
   position: relative;
   z-index: 2;
 }
-.main_container > article:nth-child(3n + 1):after {
+.main_container > *:nth-child(3n + 1):after {
   content: '';
   position: absolute;
   left: 0;
@@ -980,11 +981,11 @@ article.portfolio .col-lg-12 h2 + p {
   opacity: 0.85;
   z-index: 1;
 }
-.main_container > article:nth-child(3n) {
+.main_container > *:nth-child(3n) {
   background-color: #f7f7f7;
 }
-.main_container > article:nth-child(3n + 2):not(.about):before,
-.main_container > article:nth-child(3n):before {
+.main_container > *:nth-child(3n + 2):not(.about):before,
+.main_container > *:nth-child(3n):before {
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
@@ -1006,16 +1007,16 @@ article.portfolio .col-lg-12 h2 + p {
   left: 0;
   right: 0;
 }
-.main_container > article:nth-child(3n + 2) {
+.main_container > *:nth-child(3n + 2) {
   counter-increment: my-article-counter1 my-article-counter1;
 }
-.main_container > article:nth-child(3n + 2):before {
+.main_container > *:nth-child(3n + 2):before {
   content: "0" counter(my-article-counter1);
 }
-.main_container > article:nth-child(3n) {
+.main_container > *:nth-child(3n) {
   counter-increment: my-article-counter2 2;
 }
-.main_container > article:nth-child(3n):before {
+.main_container > *:nth-child(3n):before {
   content: "0" counter(my-article-counter2);
 }
 .my_btn {
@@ -2310,7 +2311,7 @@ article.portfolio .col-lg-12 h2 + p {
   transform: rotate(360deg);
 }
 @media (max-width: 1280px) {
-  .main_container > article .col-lg-12 h2 {
+  .main_container > * .col-lg-12 h2 {
     font-size: 50px;
   }
   .service h5 {
@@ -2424,14 +2425,14 @@ article.portfolio .col-lg-12 h2 + p {
   }
 }
 @media (max-width: 768px) {
-  .main_container > article {
+  .main_container > * {
     padding-bottom: 50px;
     padding-top: 50px;
   }
   .our_services > * {
     margin-bottom: 15px;
   }
-  .main_container > article .col-lg-12 h2 {
+  .main_container > * .col-lg-12 h2 {
     font-size: 38px;
     line-height: 40px;
   }

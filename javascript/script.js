@@ -52,7 +52,7 @@ jQuery(document).ready(function($) {
             duration: 3000 ,
             leeway: 10,
                 complete: function (e) {
-                e.text( e.text() + " +")
+                e.text( e.text() + "+");
                 }
 
           });
